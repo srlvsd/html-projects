@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Hw sliders</title>
+</head>
+<body>
+	<style>
+.right-side{
+  display: inline-block;
+  float: right;
+  width: 50%;
+  position: fixed;
+  float: right; 
+  margin-left: 950px; 
+    margin-right: 200px; 
+  margin-top: 100px; 
+  border-radius: 15px;
+  
+}
+
+h1{
+font-family: calibri;
+text-align: center;
+color:rgb(61, 138, 225 );
+margin-right: 450px;
+}
+ 
+
+
+
+input:focus{
+background-color: lightblue;
+}
+
+button:active{
+    color: blue;
+}
+
+input{
+border-radius: 10px;
+font-size: 20px;
+padding-top: 15px;
+padding-bottom: 15px;
+padding-left: 35px;
+}
+
+.LogIn{
+  background:rgb(61, 138, 225 );
+  border-radius: 5px;
+  border: rgb(65, 105, 225);
+  padding-right:45px;
+  padding-left:45px;
+  padding-top: 7px;
+  padding-bottom: 7PX;
+  color: white;
+  line-height: 50px;
+text-align: center;
+border-radius: 15px;
+font-weight: bold;}
+	</style>
+
+	<style>
+		*{
+   margin: 0;
+   box-sizing: border-box;
+}
+
+body{
+   background-color: #fff9f2;
+}
+
+.post-wrap{
+   max-width: 1120px;
+   margin: 0 auto;
+   display: flex;
+   justify-content: left;
+   flex-wrap: wrap;
+   margin-top: 130px;
+   margin-left: 100px;
+   
+}
+
+.post-item{
+   padding: 10px;
+
+}
+
+.post-link{
+   text-decoration: none;
+   display: block;
+}
+
+.post-item-wrap{
+   overflow: hidden;
+   position: relative;
+}
+
+.post-item img{
+   display: block;
+   width: 100%;
+   width: 500px;
+   height: 500px;
+}
+
+.text-wrapper{
+   position: absolute;
+   display: flex;
+   justify-content: flex-end;
+   flex-direction:column; 
+   height: 100%;
+   top: 0;
+   left: 0;
+   z-index: 10;
+   width: 86%;
+   padding: 20px;
+   background: rgb(2, 123, 211 );
+   transform: translate3d(100%, 0, 0);
+   transition: transform .5s cubic-bezier(.33, .02, 0, .93);
+
+}
+
+.post-item:hover .text-wrapper{
+   transform: translate3d(0, 0, 0);
+   transition: transform .5s cubic-bezier(.33, .02, 0, .93) .3s;
+
+}
+
+.overlay{
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+   z-index: 5;
+   background: #d1afa6;
+   transform: translate3d(-100%, 0, 0);
+   transition: transform .4s cubic-bezier(.33, .02, 0, .93) .2s;
+}
+
+.post-item:hover .overlay{
+   transform: translate3d(-100%, 0, 0);
+   transition: transform .5s cubic-bezier(.33, .02, 0, .93);
+}
+
+.post-cat{
+   text-transform: uppercase;
+   margin-bottom: 5px;
+   color: white;
+   width: min-content;
+   font-family: calibri;
+   font-weight: bold;
+   font-size: 30px ;
+}
+
+.post-title{
+   font-style: italic;
+    color: wheat;
+   width:100%;
+   font-family: calibri;
+   font-weight: bold;
+   font-size: 30px ;
+   text-align: right;
+}
+
+@media (min-width: 888px){
+
+   .post-item{
+      flex-basis: 50%;
+      flex-shrink: 0;
+   }
+}
+
+@media (min-width: 1050px){
+   .post-item{
+      flex-basis: 40%
+   }
+}
+.button-two{
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    padding: 15px;
+    background-color:rgb(2, 123, 211 );
+    color: white;
+    border-radius: 15px;
+}
+
+.button-two span{
+    display: block;
+    overflow: hidden;
+    max-width: 0;
+    opacity: 0;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    white-space: normal;
+    letter-spacing:1px;
+    line-height: 1;
+    transition: .4s ease;
+
+}
+
+.button-two:after{
+    content: 'Наши курсы';
+    font-family: Linearicons-Free;
+    font-style: none;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 22px;
+    margin-left: 200px;
+}
+
+.button-two:hover span{
+    max-width: 150px;
+    opacity: 1;
+    margin-right: 6px;
+    
+}       
+.left-side{
+  margin-right: 950px;
+}
+
+}
+	</style>  
+<div class="right-side">  
+
+		<h1> Для регистрации на мастер-класс</h1> <br>
+           
+    		<input required placeholder="Ф.И.О." type="text"><br> <br> 
+            <input required placeholder="Номер телефона" type="text" value="+7"><br> <br> 
+               
+             		<form>  
+              				<p> 
+              					<input type="button" type="submit" class="LogIn" value="Зарегестрироваться" onClick='location.href="file:///C:/Users/Acer/Desktop/istep/projects/html%20projets/Welcome.html"'>  
+              				</p>
+             		</form>
+</div>
+
+<div class="left-side"> 
+  <div class="post-wrap">
+          <div class="post-item">
+              <div class="post-item-wrap">
+                  <a href="" class="post-link">
+                      <div class="image-wrapper">
+                         <a href="https://almaty.itstep.org/"> <img src="http://sun9-64.userapi.com/s/v1/ig2/78jVpcCXOLqY1sQic0r-f6Ii0Ms2yx5mAZpQG17hSbUjhewu5t8VB1jdNVQhkDWT6pfY66OPLvSod8-Ur9SQ4DaK.jpg?size=200x200&quality=96&crop=0,0,700,700&ava=1" alt="grass"></a>
+                      </div>
+                      <div class="text-wrapper">
+                          <div class="post-cat">
+                              Компьютерная Академия ШАГ
+                          </div>
+                          <h3 class="post-title">
+                           — ваш билет в<br>IT-индустрию
+                          </h3>
+                      </div>
+                       <div class="overlay"></div>
+                  </a>
+              </div>
+          </div>
+      </div>
+</div>
+    
+<a href="https://almaty.itstep.org/IT_courses_for_adults#c2464" class="button-two">
+        <span>
+            Программирование и Дизайн
+        </span>
+    </a>
+
+                  
+       
+</body>
+</html>
